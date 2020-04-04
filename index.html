@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 This is intended to create a canvas with accessory buttons that will draw a rectangle, writes my name, draws a picture, and clears the canvas.
  
 Known Issues:
-clear and picture buttons arent working proper functions
+clear button isn't working
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -38,30 +38,24 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 //this instructs the drawing of a rectangle with variables that help define what how it is to be drawn
+var b_canvas = document.getElementById("b");
+var b_context = b_canvas.getContext("2d");
 function draw_rect() {
- 	var b_canvas = document.getElementById("b");
-  	var b_context = b_canvas.getContext("2d");
 	b_context.fillRect(50, 25, 150, 100);
 }
 //this creates the function that will write my name
 function write_name(){
-	var c_canvas = document.getElementById("b");
-	var c_context = c_canvas.getContext("2d");
-	c_context.font = "30px Arial";
-	c_context.fillText("Angela Owe", 10, 50);
+	b_context.font = "30px Arial";
+	b_context.fillText("Angela Owe", 10, 50);
 }
 //this generates the function that will draw a picture
 function draw_pic(){
-	var d_canvas = document.getElementById("b");
-	var d_context = d_canvas.getContext("2d");
 	var d_image = document.getElementById("duck");
-	d_context.drawImage(d_image, 10, 10, 100, 100);
+	b_context.drawImage(d_image, 10, 50, 100, 100);
 }
 //this makes the function to clear the canvas
 function clear(){
-	var a_canvas = document.getElementById("b");
-	a_canvas = a_canvas.width
-	
+	b_context.clearRect(0, 0, canvas.width, canvas.height);
 }
 </script>
 

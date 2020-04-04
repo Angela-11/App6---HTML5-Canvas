@@ -45,17 +45,17 @@ function draw_rect() {
 }
 //this creates the function that will write my name
 function write_name(){
-	var c = document.getElementById("b");
-	var ctx = c.getContext("2d");
-	ctx.font = "30px Arial";
-	ctx.fillText("Angela Owe", 10, 50);
+	var b_canvas = document.getElementById("b");
+	var b_context = b_canvas.getContext("2d");
+	b_context.font = "30px Arial";
+	b_context.fillText("Angela Owe", 10, 50);
 }
 //this generates the function that will draw a picture
 function draw_pic(){
-	var c = document.getElementById("b");
-	var ctx = c.getContext("2d");
-	var img = document.getElementById("duck");
-	ctx.drawImage(img, 10, 10);
+	var b_canvas = document.getElementById("b");
+	var b_context = b_canvas.getContext("2d");
+	var b_image = document.getElementById("duck");
+	b_context.drawImage(b_image, 10, 10);
 }
 //this makes the function to clear the canvas
 function clear(){

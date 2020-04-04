@@ -60,7 +60,8 @@ function draw_pic(){
 //this makes the function to clear the canvas
 function clear(){
 	var a_canvas = document.getElementById("b");
-	a_canvas.width = a_canvas.width;
+	a_canvas = a_canvas.width
+	
 }
 </script>
 
@@ -102,20 +103,21 @@ function clear(){
 	<canvas id="b" width="200" height="100" style="border:1px solid #000000;"></canvas>
 	
 	<!--This produces the button that will draw a rectangle on the canvas-->
-	<p><button onclick="draw_rect();" class="w3-btn w3-grey w3-round">Rectangle</a></p>
+	<button onclick="draw_rect();" class="w3-btn w3-grey w3-round">Rectangle</a>
 		
 	<!--This produces the button that will write my name on the canvas-->
-	<p><button onclick="write_name();" class="w3-btn w3-grey w3-round">Name</a></p>
+	<button onclick="write_name();" class="w3-btn w3-grey w3-round">Name</a>
+	
+	<!--This produces the button that will draw a picture the canvas-->
+	<button onclick="draw_pic();" class="w3-btn w3-grey w3-round">Picture</a>
 	
 	<!--This is the picture that will be drawn-->
 	<img id="duck" src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Baby-Duck-Cartoon-1.jpg" alt="duck" width="100" height="100">
 	
-	<!--This produces the button that will draw a picture the canvas-->
-	<p><button onclick="draw_pic();" class="w3-btn w3-grey w3-round">Picture</a></p>
-		
 	<!--This produces the button that will reset the canvas to blank-->
 	<button onclick="clear();" class="w3-btn w3-grey w3-round">Clear Canvas</a>
-
+</div>
+	
 <!--This produces the footer for each page-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>

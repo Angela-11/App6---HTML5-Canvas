@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 This is intended to create a canvas with accessory buttons that will draw a rectangle, writes my name, draws a picture, and clears the canvas.
  
 Known Issues:
-buttons arent working and are formatted overlapping
+buttons arent working proper functions
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -45,22 +45,22 @@ function draw_rect() {
 }
 //this creates the function that will write my name
 function write_name(){
-	var b_canvas = document.getElementById("b");
-	var b_context = b_canvas.getContext("2d");
-	b_context.font = "30px Arial";
-	b_context.fillText("Angela Owe", 10, 50);
+	var c_canvas = document.getElementById("b");
+	var c_context = c_canvas.getContext("2d");
+	c_context.font = "30px Arial";
+	c_context.fillText("Angela Owe", 10, 50);
 }
 //this generates the function that will draw a picture
 function draw_pic(){
-	var b_canvas = document.getElementById("b");
-	var b_context = b_canvas.getContext("2d");
-	var b_image = document.getElementById("duck");
-	b_context.drawImage(b_image, 10, 10);
+	var d_canvas = document.getElementById("b");
+	var d_context = d_canvas.getContext("2d");
+	var d_image = document.getElementById("duck");
+	d_context.drawImage(b_image, 10, 10);
 }
 //this makes the function to clear the canvas
 function clear(){
-	var b_canvas = document.getElementById("b");
-	b_canvas.width = b_canvas.width;
+	var a_canvas = document.getElementById("b");
+	a_canvas.width = a_canvas.width;
 }
 </script>
 

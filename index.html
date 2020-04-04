@@ -4,10 +4,10 @@
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
- 
+
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Angela Owe
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,14 +17,14 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This is intended to create a canvas with accessory buttons that will draw a rectangle, writes my name, draws a picture, and clears the canvas.
  
 Known Issues:
-blah, blah, blah, blah
+lack of code ._.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
+<!--This produces the header for each page-->	
    <head> 
       <title>App6---HTML5-Canvas</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,15 +33,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
 <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+//this instructs the drawing of a rectangle with variables that help define what how it is to be drawn
+function draw_rect() {
+ 	var b_canvas = document.getElementById("b");
+  	var b_context = b_canvas.getContext("2d");
+	b_context.fillRect(50, 25, 150, 100);
+}
+//this creates the function that will write my name
+function write_name(){
+	var c = document.getElementById("b");
+	var ctx = c.getContext("2d");
+	ctx.font = "30px Arial";
+	ctx.fillText("Angela Owe", 10, 50);
+}
+//this generates the function that will draw a picture
+function draw_pic(){
+	var c = document.getElementById("b");
+	var ctx = c.getContext("2d");
+	var img = document.getElementById("duck");
+	ctx.drawImage(img, 10, 10);
+}
+//this makes the function to clear the canvas
+function clear(){
+	var b_canvas = document.getElementById("b");
+	b_canvas.width = b_canvas.width;
+}
 </script>
 
-
-
+<!--This creates the page for the canvas-->
 <style>	
 .body {
      margin: 0em;
@@ -61,19 +84,31 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     z-index: 1;
 }
 </style>
-
+	
+<!--This makes up the info for the page-->
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
-</div>
-	
+</div>	
+<!--This inputs the content that should show up on the page as text-->
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>See what the buttons will do!</p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
+	<!--This produces a bordered canvas sized to fit a phone screen-->
+	<canvas id="b" width="200" height="100" style="border:1px solid #000000;"></canvas>
+	<!--This produces the button that will draw a rectangle on the canvas-->
+	<onclick="draw_rect();" class="w3-btn w3-grey w3-round">Rectangle</a>
+	<!--This produces the button that will write my name on the canvas-->
+	<onclick="write_name();" class="w3-btn w3-grey w3-round">Name</a>
+	<!--This produces the button that will draw a picture the canvas-->
+	<onclick="draw_pic();" class="w3-btn w3-grey w3-round">Picture</a>
+	<!--This produces the button that will reset the canvas to blank-->
+	<onclick="clear();" class="w3-btn w3-grey w3-round">Clear Canvas</a> 
+	<img src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Baby-Duck-Cartoon-1.jpg" alt="duck">
+<!--This produces the footer for each page-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>

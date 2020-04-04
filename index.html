@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 This is intended to create a canvas with accessory buttons that will draw a rectangle, writes my name, draws a picture, and clears the canvas.
  
 Known Issues:
-lack of code ._.
+buttons arent working and are formatted overlapping
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -100,16 +100,21 @@ function clear(){
 	
 	<!--This produces a bordered canvas sized to fit a phone screen-->
 	<canvas id="b" width="200" height="100" style="border:1px solid #000000;"></canvas>
-	<!--This produces the button that will draw a rectangle on the canvas-->
-	<onclick="draw_rect();" class="w3-btn w3-grey w3-round">Rectangle</a>
-	<!--This produces the button that will write my name on the canvas-->
-	<onclick="write_name();" class="w3-btn w3-grey w3-round">Name</a>
+	
+		<!--This produces the button that will draw a rectangle on the canvas-->
+	<p><onclick="draw_rect();" class="w3-btn w3-grey w3-round">Rectangle</a></p>
+		
+		<!--This produces the button that will write my name on the canvas-->
+		<onclick="write_name();" class="w3-btn w3-grey w3-round">Name</a>
+	
 	<!--This is the picture that will be drawn-->
 	<img src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Baby-Duck-Cartoon-1.jpg" alt="duck" width="20" height="20">
-	<!--This produces the button that will draw a picture the canvas-->
-	<onclick="draw_pic();" class="w3-btn w3-grey w3-round">Picture</a>
-	<!--This produces the button that will reset the canvas to blank-->
-	<onclick="clear();" class="w3-btn w3-grey w3-round">Clear Canvas</a> 
+	
+		<!--This produces the button that will draw a picture the canvas-->
+		<onclick="draw_pic();" class="w3-btn w3-grey w3-round">Picture</a>
+		
+		<!--This produces the button that will reset the canvas to blank-->
+		<onclick="clear();" class="w3-btn w3-grey w3-round">Clear Canvas</a> 
 
 <!--This produces the footer for each page-->
 <footer class="w3-bottom w3-container w3-flat-carrot">

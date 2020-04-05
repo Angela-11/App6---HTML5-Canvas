@@ -40,7 +40,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 //this instructs the drawing of a rectangle with variables that help define what how it is to be drawn
 var b_canvas = document.getElementById("b");
 var b_context = b_canvas.getContext("2d");
-function draw_rect() {
+function draw_rect(){
 	b_context.fillRect(50, 25, 150, 100);
 }
 //this creates the function that will write my name
@@ -51,7 +51,7 @@ function write_name(){
 //this generates the function that will draw a picture
 function draw_pic(){
 	var d_image = document.getElementById("duck");
-	b_context.drawImage(d_image, 10, 50, 100, 100);
+	b_context.drawImage(d_image, 10, 5, 100, 100);
 }
 //this makes the function to clear the canvas
 function clear(){
